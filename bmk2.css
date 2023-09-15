@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 } 
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background: #080808;
@@ -105,12 +108,12 @@ nav{
 }
     
 
-.about-col-1 {
+.about-col-2 {
     flex-basis: 35%;
     
 } 
 
-.about-col-1 img{
+.about-col-2 img{
    width: 50%; 
     height: auto;
     border-radius: 15px;
@@ -119,7 +122,7 @@ nav{
     flex-wrap: wrap;
     margin-left: auto;
 }
-.about-col-2{
+.about-col-1{
     flex-basis: -60%; 
     position: absolute;
 }
@@ -128,12 +131,12 @@ nav{
     font-weight: 600;
     color: white;
 }
-.about-col-2 p span{
+.about-col-1 p span{
     color: #ff004f;
     font-size: 25px;
     font-weight: 550;
 }
-.about-col-2 p{
+.about-col-1 p{
     text-align:justify;
     
 }
@@ -258,13 +261,20 @@ nav{
     background: #ff004f;
 }
 /*------------------contact-------------*/
+#contact{
+    padding: 60px 0;
+}
+.rows {
+    display: flex;
+    justify-content: space-between; /* To move .contact-right to the right corner */
+}
+.contact-right {
+    flex-basis: 55%;
+}
+.contact-left {
+    flex-basis: 40%; /* Adjust the width as needed */
+}
 
-.contact-left{
-    flex-basis: 35%;
-}
-.contact-right{
-    flex-basis: 60%;
-}
 .contact-left p{
     margin-top: 30px;
 }
@@ -273,6 +283,10 @@ nav{
     margin-right: 15px;
     font-size: 25px;
 }
+.social-icons{
+    margin-top: 30px;
+}
+
 .social-icons a{
     text-decoration: none;
     font-size: 30px;
@@ -303,3 +317,91 @@ form input, form textarea{
     display: inline-block;
     background: #FF004F;
 }
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+    position: absolute;
+}
+.copyright i{
+    color: #ff004f;
+}
+/*----------small screen--------------*/
+nav .fas {
+    display: none;
+}
+
+
+@media(max-width: 700px){
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    
+    .header-text h1{
+        font-size: 25px;
+    }  
+    nav .fas {
+    display: block;
+    font-size: 15px;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 30px;
+        margin-top: 60px;
+    }
+    .about-col-1 p{
+        font-size: 12px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2 img{
+     margin-bottom: 100px;
+    }
+    .about-col-2{
+        font-size: 40px;
+       
+    }
+  
+    .rows {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-left,
+.contact-right {
+    flex-basis: 100%; 
+}
+
+    .copyright{
+        font-size: 14px;
+    }
+}
+

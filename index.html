@@ -13,13 +13,14 @@
         <div class="container">
             <nav> 
               <a href="#" class="logo"> <span>B</span>MK.</a>
-         <ul> 
-                <li><a href="#">Home</a></li>
-                <li><a href="#">BMK Service </a> </li>  
-                 <li><a href="#">About Us </a>   </li>
-                 <li><a href="#">Contact </a></li> 
-                
+         <ul id="sidemenu"> 
+                <li><a href="#header">Home</a></li>
+                <li><a href="#services">BMK Service </a> </li>  
+                 <li><a href="#about">About Us </a>   </li>
+                 <li><a href="#contact">Contact </a></li> 
+                <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
           </nav>  
             <div class="header-text">
             <p>Welcome to <span>B</span>MK  IT Solutions</p>
@@ -32,14 +33,14 @@
     <div id="about">
         <div class="container">
         <div class="row">
-            <div class="about-col-2">
+            <div class="about-col-1">
             <h1 class="subtitle">About us</h1>
                 <p><br>At BMK IT Solutions, we specialize in providing top-notch IT<br> solutions tailored to meet your network security and technology <br>needs. With a passion for innovation and a commitment to <br>excellence, we are your go-to partner for all things IT-related.<br> <span><br>Our Team</span>:<br>
 Our team of experienced and certified professionals is dedicated to <br>ensuring the security and efficiency of your IT infrastructure. From <br>network design and implementation to data protection and<br> cybersecurity, we've got you covered.</p>
         
              </div>
            
-            <div class="about-col-1">
+            <div class="about-col-2">
                 <img src="bmk3.jpg">
             </div>
             </div>
@@ -131,7 +132,15 @@ Our team of experienced and certified professionals is dedicated to <br>ensuring
 <!----------------------contact---------->
         <div id="contact">
     <div class="container">
-        <div class="row">
+        <div class="rows">
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn-2">Submit</button>
+                </form>
+            </div>
             <div class="contact-left">
                 <h1 class="subtitle">Contact Us</h1>
                 <p><i class="fa-solid fa-paper-plane"></i>contact@example.com</p>
@@ -142,17 +151,22 @@ Our team of experienced and certified professionals is dedicated to <br>ensuring
                     <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
-            <div class="contact-right">
-                <form>
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn-2">Submit</button>
-                </form>
-            </div>
         </div>
     </div>
+            <div class="copyright">
+            <p>Copyright © BMK.  Made with <i class="fa-solid fa-heart"></i> by Yididiya Abraham </p>
+            </div>
+            
 </div>
+<script>
+        var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right="0";
+    }
+     function closemenu(){
+        sidemenu.style.right="-200px";
+    }
+        </script>
 
     </body>
 </html>
